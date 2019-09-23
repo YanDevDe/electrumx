@@ -1156,8 +1156,8 @@ class Dash(Coin):
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
-        import x11_hash
-        return x11_hash.getPoWHash(header)
+        import dash_hash
+        return dash_hash.getPoWHash(header)
 
 
 class DashTestnet(Dash):
@@ -1179,6 +1179,36 @@ class DashTestnet(Dash):
         'electrum.dash.siampm.com s t',
         'dasht.random.re s54002 t54001',
     ]
+
+
+# Source: https://github.com/PACGlobalOfficial/PAC
+class PacGlobal(Dash):
+    NAME = "PacGlobal"
+    SHORTNAME = "PAC"
+    NET = "mainnet"
+    XPUB_VERBYTES = bytes.fromhex("0488b21e")
+    XPRV_VERBYTES = bytes.fromhex("0488ade4")
+    GENESIS_HASH = ('00000354655ff039a51273fe61d3b493'
+                    'bd2897fe6c16f732dbc4ae19f04b789e')
+    P2PKH_VERBYTE = bytes.fromhex("37")
+    P2SH_VERBYTES = [bytes.fromhex("0a")]
+    WIF_BYTE = bytes.fromhex("cc")
+    TX_COUNT_HEIGHT = 300000
+    TX_COUNT = 934991
+    TX_PER_BLOCK = 3
+    RPC_PORT = 9998
+    PEERS = [
+        'wl4sfwq2hwxnodof.onion s t',
+    ]
+    SESSIONCLS = DashElectrumX
+    DAEMON = daemon.LegacyRPCDaemon
+    DESERIALIZER = lib_tx_dash.DeserializerDash
+
+    @classmethod
+    def header_hash(cls, header):
+        '''Given a header return the hash.'''
+        import dash_hash
+        return dash_hash.getPoWHash(header)
 
 
 class Argentum(AuxPowMixin, Coin):
@@ -2246,53 +2276,6 @@ class Odin(Coin):
         else:
             import quark_hash
             return quark_hash.getPoWHash(header)
-
-
-class Pac(Coin):
-    NAME = "PAC"
-    SHORTNAME = "PAC"
-    NET = "mainnet"
-    XPUB_VERBYTES = bytes.fromhex("0488B21E")
-    XPRV_VERBYTES = bytes.fromhex("0488ADE4")
-    GENESIS_HASH = ('00000354655ff039a51273fe61d3b493'
-                    'bd2897fe6c16f732dbc4ae19f04b789e')
-    P2PKH_VERBYTE = bytes.fromhex("37")
-    P2SH_VERBYTES = [bytes.fromhex("0A")]
-    WIF_BYTE = bytes.fromhex("CC")
-    TX_COUNT_HEIGHT = 14939
-    TX_COUNT = 23708
-    TX_PER_BLOCK = 2
-    RPC_PORT = 7111
-    PEERS = [
-        'electrum.paccoin.io s t',
-        'electro-pac.paccoin.io s t'
-    ]
-    SESSIONCLS = DashElectrumX
-    DAEMON = daemon.DashDaemon
-    ESTIMATE_FEE = 0.00001
-    RELAY_FEE = 0.00001
-
-    @classmethod
-    def header_hash(cls, header):
-        '''Given a header return the hash.'''
-        import x11_hash
-        return x11_hash.getPoWHash(header)
-
-
-class PacTestnet(Pac):
-    SHORTNAME = "tPAC"
-    NET = "testnet"
-    XPUB_VERBYTES = bytes.fromhex("043587CF")
-    XPRV_VERBYTES = bytes.fromhex("04358394")
-    GENESIS_HASH = ('00000da63bd9478b655ef6bf1bf76cd9'
-                    'af05202ab68643f9091e049b2b5280ed')
-    P2PKH_VERBYTE = bytes.fromhex("78")
-    P2SH_VERBYTES = [bytes.fromhex("0E")]
-    WIF_BYTE = bytes.fromhex("EF")
-    TX_COUNT_HEIGHT = 16275
-    TX_COUNT = 16275
-    TX_PER_BLOCK = 1
-    RPC_PORT = 17111
 
 
 class Zcoin(Coin):

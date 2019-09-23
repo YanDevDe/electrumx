@@ -1,0 +1,77 @@
+INFO:electrumx:ElectrumX server starting
+WARNING:Env:lowered maximum sessions from 1,000 to 674 because your open file limit is 1,024
+INFO:electrumx:logging level: INFO
+INFO:Controller:Python version: 3.7.3 (default, Apr  3 2019, 05:39:12)  [GCC 8.3.0]
+INFO:Controller:software version: ElectrumX 1.12
+INFO:Controller:aiorpcX version: 0.18.3
+INFO:Controller:supported protocol versions: 1.4-1.4.2
+INFO:Controller:event loop policy: None
+INFO:Controller:reorg limit is 200 blocks
+INFO:DashDaemon:daemon #1 at 10.0.0.136:9998/ (current)
+INFO:DB:switching current directory to datadir
+INFO:DB:using leveldb for DB backend
+INFO:DB:opened UTXO DB (for sync: True)
+INFO:DB:DB version: 6
+INFO:DB:coin: PacGlobal
+INFO:DB:network: mainnet
+INFO:DB:height: -1
+INFO:DB:tip: 0000000000000000000000000000000000000000000000000000000000000000
+INFO:DB:tx count: 0
+INFO:DB:flushing DB cache at 1,200 MB
+INFO:DB:sync time so far: 00s
+INFO:History:history DB version: 0
+INFO:History:flush count: 0
+INFO:Prefetcher:catching up to daemon height 324,858 (324,859 blocks behind)
+INFO:Prefetcher:verified genesis block with hash 00000354655ff039a51273fe61d3b493bd2897fe6c16f732dbc4ae19f04b789e
+INFO:BlockProcessor:our height: 9 daemon: 324,858 UTXOs 0MB hist 0MB
+INFO:BlockProcessor:our height: 48,409 daemon: 324,858 UTXOs 63MB hist 80MB
+INFO:BlockProcessor:our height: 105,809 daemon: 324,858 UTXOs 78MB hist 134MB
+INFO:BlockProcessor:our height: 140,284 daemon: 324,859 UTXOs 134MB hist 156MB
+INFO:BlockProcessor:our height: 140,644 daemon: 324,859 UTXOs 1,218MB hist 156MB
+INFO:DB:flushed filesystem data in 0.03s
+INFO:History:flushed history in 1.6s for 701,842 addrs
+INFO:DB:flushed 140,645 blocks with 421,361 txs, 5,943,597 UTXO adds, 0 spends in 4.9s, committing...
+INFO:DB:flush #1 took 18.2s.  Height 140,644 txs: 421,361 (+421,361)
+INFO:DB:tx/sec since genesis: 3,000, since last flush: 3,001
+INFO:DB:sync time: 02m 20s  ETA: 05m 09s
+INFO:BlockProcessor:our height: 145,534 daemon: 324,860 UTXOs 242MB hist 11MB
+INFO:BlockProcessor:our height: 145,871 daemon: 324,861 UTXOs 246MB hist 12MB
+INFO:BlockProcessor:our height: 146,154 daemon: 324,861 UTXOs 343MB hist 13MB
+INFO:BlockProcessor:our height: 146,378 daemon: 324,861 UTXOs 472MB hist 13MB
+INFO:BlockProcessor:our height: 146,602 daemon: 324,861 UTXOs 593MB hist 14MB
+INFO:BlockProcessor:our height: 147,722 daemon: 324,861 UTXOs 1,076MB hist 15MB
+INFO:BlockProcessor:our height: 148,218 daemon: 324,861 UTXOs 844MB hist 16MB
+INFO:BlockProcessor:our height: 148,540 daemon: 324,861 UTXOs 1,044MB hist 17MB
+INFO:BlockProcessor:our height: 148,916 daemon: 324,861 UTXOs 1,058MB hist 18MB
+INFO:BlockProcessor:our height: 149,294 daemon: 324,861 UTXOs 789MB hist 19MB
+INFO:BlockProcessor:our height: 149,691 daemon: 324,862 UTXOs 946MB hist 20MB
+INFO:BlockProcessor:our height: 150,069 daemon: 324,862 UTXOs 855MB hist 20MB
+INFO:BlockProcessor:our height: 150,433 daemon: 324,862 UTXOs 853MB hist 21MB
+INFO:BlockProcessor:our height: 150,797 daemon: 324,862 UTXOs 832MB hist 22MB
+INFO:BlockProcessor:our height: 151,133 daemon: 324,862 UTXOs 860MB hist 23MB
+INFO:BlockProcessor:our height: 174,178 daemon: 324,869 UTXOs 654MB hist 30MB
+INFO:BlockProcessor:our height: 254,978 daemon: 324,869 UTXOs 660MB hist 45MB
+INFO:BlockProcessor:caught up to height 324869
+INFO:DB:flushed filesystem data in 0.03s
+INFO:History:flushed history in 0.2s for 149,715 addrs
+INFO:Prefetcher:new block height 324,870 hash 0000000000000185451e893ffc9bf034659e1d542a14ae6cf336c136de5d6fde
+INFO:DB:flushed 184,225 blocks with 546,006 txs, 189,897 UTXO adds, 5,510,914 spends in 6.3s, committing...
+INFO:DB:flush #2 took 12.1s.  Height 324,869 txs: 967,367 (+546,006)
+INFO:DB:tx/sec since genesis: 1,379, since last flush: 974
+INFO:DB:sync time: 11m 41s  ETA: 00s
+INFO:BlockProcessor:ElectrumX 1.12 synced to height 324,869
+INFO:DB:closing DBs to re-open for serving
+INFO:DB:opened UTXO DB (for sync: False)
+INFO:DB:DB version: 6
+INFO:DB:coin: PacGlobal
+INFO:DB:network: mainnet
+INFO:DB:height: 324,869
+INFO:DB:tip: 0000000000000de3c635633dcf42558286b8b5e486f19775f8bcfd55a7e4a7cd
+INFO:DB:tx count: 967,367
+INFO:History:history DB version: 0
+INFO:History:flush count: 2
+INFO:DB:populating header merkle cache...
+INFO:MemPool:beginning processing of daemon mempool.  This can take some time...
+INFO:DB:flush #3 took 0.0s.  Height 324,870 txs: 967,368 (+1)
+INFO:BlockProcessor:processed 1 block size 0.00 MB in 0.0s
+
