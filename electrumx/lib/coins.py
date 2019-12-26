@@ -1203,7 +1203,9 @@ class PacGlobal(Dash):
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.LegacyRPCDaemon
     DESERIALIZER = lib_tx_dash.DeserializerDash
-
+    ESTIMATE_FEE = 0.00001
+    RELAY_FEE = 0.00001
+    
     @classmethod
     def header_hash(cls, header):
         '''Given a header return the hash.'''
