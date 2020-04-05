@@ -1198,13 +1198,14 @@ class PacGlobal(Dash):
     TX_PER_BLOCK = 3
     RPC_PORT = 9998
     PEERS = [
-        'wl4sfwq2hwxnodof.onion s t',
+        'eu1.electrum.pacglobal.io s t',
+        'eu2.electrum.pacglobal.io s t',
+        'eu3.electrum.pacglobal.io s t',
+        'electrum.app.pacglobal.io s t'
     ]
     SESSIONCLS = DashElectrumX
     DAEMON = daemon.LegacyRPCDaemon
     DESERIALIZER = lib_tx_dash.DeserializerDash
-    ESTIMATE_FEE = 0.00001
-    RELAY_FEE = 0.00001
     
     @classmethod
     def header_hash(cls, header):
